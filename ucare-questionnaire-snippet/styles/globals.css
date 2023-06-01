@@ -1,44 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato":wght@500&display=swap');
 
-* {
-  box-sizing: border-box;
-}
+:root {
 
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
+    --font-family: 'Lato', sans-serif;
+    /*
+    Background
+    */
+    --gradient-bg: linear-gradient(98.78deg, #EDE8DF 39.67%, #D0DAEA 105.74%);
+    --color-bg: #F3F2EF;
+    --color-bg-white: #FFFFFF;
+    --color-content: #F3F4F5;
 
-a:hover {
-  text-decoration: underline;
-}
+    /*
+    CTA
+    */
+    --color-primary:#103567;
+    --color-secondary: #D34C1A;
+    --color-tertiary: #F3F3F3;
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-h1,
-h2,
-p,
-ul {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-}
+    /*
+    Text coloring
+    */
+    --color-textlight: #535353;
+    --color-textmedium:  #333333;
+    --color-textdark: #000;
+    --color-accent: #134D93;
+ 
+  }

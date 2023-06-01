@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.gradient__bg {
+  background: var(--gradient-bg);
+}
+
+body {
+  background: var(--color-bg);
+  font-family: var(--font-family);
+}
+
+.section__padding {
+  padding: 4rem 6 rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+  /* For middle-sized devices like tablets or bigger phones*/
+  @media screen and (max-width: 700px) {
+    .section__padding {
+        padding: 4rem;
+    }
+    .section__margin {
+        margin: 4rem;
+    }
+  }

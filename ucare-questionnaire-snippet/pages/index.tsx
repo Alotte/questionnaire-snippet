@@ -1,25 +1,18 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+
 import Link from 'next/link';
 import Layout, { siteTitle } from '../containers/layout/Layout';
-import utilStyles from '../styles/utils.module.css';
+import { Questionnaires, TopMenu } from '../containers';
 
 
-export default function Home() {
+export default function QuestionnairesHome() {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-    
-          <a href="https://www.instagram.com/askarvi/reels/">Link</a>
-        </p>
-
-
-      </section>
+      <TopMenu />
+      <Questionnaires/>
     </Layout>
   );
 }
