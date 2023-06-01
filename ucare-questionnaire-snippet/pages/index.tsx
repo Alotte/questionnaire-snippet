@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import Layout, { siteTitle } from '../components/layout/layout';
+import Layout, { siteTitle } from '../containers/layout/Layout';
 import utilStyles from '../styles/utils.module.css';
 
 
@@ -15,7 +15,7 @@ export default function Home() {
         <p>[Your Self Introduction]</p>
         <p>
     
-          <a href="https://www.instagram.com/askarvi/reels/">Link to other site</a>
+          <a href="https://www.instagram.com/askarvi/reels/">Link</a>
         </p>
 
 
