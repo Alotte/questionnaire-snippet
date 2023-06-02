@@ -1,5 +1,18 @@
 .page {
     background: var(--color-bg-white);
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+
+/*Half-screen*/
+@media screen and (max-width: 550px) {
+    .page {
+        margin: 1rem 1rem;
+    
+    }
 }
