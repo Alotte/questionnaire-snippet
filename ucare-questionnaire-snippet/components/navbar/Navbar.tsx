@@ -95,11 +95,6 @@ const Menu = () => (
       icon= {ic_settings} 
       navName ="settings-help" 
     /> 
-    <Divider/>
-    <MenuItem 
-      icon= {ic_expand} 
-      navName ="expand" 
-    /> 
   </>
 )
 const ParticipantMenu = () => (
@@ -144,28 +139,24 @@ const Navbar = () => {
           <Menu/>
         </div>
       </div>
-
-      
-        <div className='styles.navbar_menu__toggle'>
-          {toggleMenu ? (
-            <button
-              className="icon-button"
-              onClick={handleToggleMenu}
-              aria-label="Close Menu"
-            >
-              <RiCloseLine color={iconColor} size={27} />
-            </button>
-          ) : (
-            <button
-              className="icon-button"
-              onClick={handleToggleMenu}
-              aria-label="Open Menu"
-            >
-              <RiMenu3Line color={iconColor} size={27} />
-            </button>
-          )}
-        </div>
       <div className={styles.navbar_menu}>
+        {toggleMenu ? (
+          <button
+            className="icon-button"
+            onClick={handleToggleMenu}
+            aria-label="Close Menu"
+          >
+            <RiCloseLine color={iconColor} size={27} />
+          </button>
+        ) : (
+          <button
+            className="icon-button"
+            onClick={handleToggleMenu}
+            aria-label="Open Menu"
+          >
+            <RiMenu3Line color={iconColor} size={27} />
+          </button>
+        )}
         {toggleMenu && (
           <div className={styles.navbar_menu__container +" " + utils.scale_up_center}>
             <div className={styles.navbar_menu__container_links}>

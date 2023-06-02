@@ -46,7 +46,6 @@
 }
 
 .navbar_menu__container {
-    flex-wrap: wrap; 
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -54,7 +53,7 @@
     border: 1px solid #ccc;
     padding: 2rem;
     position: absolute;
-    top: 155px;
+    top: 140px;
     left: 0;
     margin-top: 1rem;
     border-radius: 5px;
@@ -84,7 +83,7 @@
     }
     .navbar__links_container__submenu {
         display: grid;
-        grid-template-columns: repeat(5, 1fr); /* Two columns with equal width */
+        grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
         grid-gap: 10px; /* Gap between grid items */
         align-items: center;
         justify-content: center; /* Center items within the row */
