@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { ReactNode } from "react"
 import {Footer, Header} from '../'
-import { Navbar } from "../../components";
+import { Breadcrumb, Navbar } from "../../components";
+import styles from './Layout.module.css'
 
 export const siteTitle: string = 'U-CARE Prototype Website';
 
@@ -30,8 +31,10 @@ export default function Layout({ children, home}:LayoutProps) {
       </Head>
       <Header />
       <main>
-        <Navbar />
-        {children}
+        <div className={styles.layout}>
+          <Navbar />
+          {children}
+        </div>
       </main>
       <Footer />
       

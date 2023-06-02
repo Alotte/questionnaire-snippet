@@ -3,7 +3,9 @@ import styles from '/TopMenu.module.css'
 
 const TopMenu = () => {
   return (
-    <div>TopMenu</div>
+    <section>
+      TopMenu
+    </section>
   )
 }
 
