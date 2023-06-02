@@ -5,30 +5,21 @@
   scroll-behavior: smooth;
 }
 
-.gradient__bg {
-  background: var(--gradient-bg);
-}
 
 body {
   background: var(--color-bg);
   font-family: var(--font-family);
 }
 
-.section__padding {
-  padding: 4rem 6 rem;
-}
-
-.section__margin {
-  margin: 4rem 6rem;
-}
 
 a {
   color: var(--color-accent);
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+p, h1, h2, h3 {
+  outline: none;
+  caret-color: transparent;
 }
 
 img {

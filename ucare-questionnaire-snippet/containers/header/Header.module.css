@@ -79,7 +79,6 @@ Tablet & Half-screen
     }
 }
 
-
 @media screen and (max-width: 735px) {
     .header__links_container{
         padding: 0;
@@ -91,6 +90,7 @@ Tablet & Half-screen
     }
     .header__links_logo {
         width: 60px;
+        height: auto;
         margin-right: 1rem;
 
     }
@@ -100,12 +100,14 @@ Tablet & Half-screen
 
     .header__links{
         width:0%;
+        height: auto;
         flex-direction:column;
 
     }
 
     .header__links_logo {
         width: 0px;
+        height: auto;
         margin: 0;
         padding: 0;
 
