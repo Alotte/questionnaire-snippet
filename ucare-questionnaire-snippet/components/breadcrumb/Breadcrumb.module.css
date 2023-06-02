@@ -1,0 +1,12 @@
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.breadcrumb p {
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+}

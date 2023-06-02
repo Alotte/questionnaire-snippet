@@ -6,7 +6,7 @@
 }
 
 /*Half-screen*/
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .layout {
     display: flex;
     flex-direction: column;

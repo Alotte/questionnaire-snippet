@@ -58,7 +58,7 @@
 }
 
 /*Half-screen*/
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .navbar__links_container{
         display: none;
     }
@@ -72,6 +72,7 @@
     }
     .navbar_menu__container {
         padding: 1rem 1rem;
+        top:90px;
     }
     .navbar_menu__container_links {
         display: flex;
@@ -89,6 +90,13 @@
         padding: 1rem 1rem;
         width: 60px;
         height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .navbar_menu__container {
+        top: 140px;
     }
 
 }

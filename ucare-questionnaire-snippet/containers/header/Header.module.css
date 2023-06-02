@@ -73,14 +73,8 @@
 /*
 Tablet & Half-screen
 */
-@media screen and (max-width: 935px) {
-    .header__links_container p {
-        
-        font-size: 12px;
-    }
-}
 
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 780px) {
     .header__links_container{
         padding: 0;
         margin: 0;
@@ -97,7 +91,7 @@ Tablet & Half-screen
     }
 }
 
-@media screen and (max-width: 661px) {
+@media screen and (max-width: 690px) {
 
     .header__links{
         width:0%;
@@ -115,10 +109,18 @@ Tablet & Half-screen
     }
 }
 
-@media screen and (max-width: 589px) {
+@media screen and (max-width: 690px) {
     .header__links_container{
         flex-direction: column;
         align-items: center;
+    }
+
+    .header__links_logo {
+        width: 48px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
     }
 
 

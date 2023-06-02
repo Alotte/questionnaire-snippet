@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato');
 
 :root {
 
@@ -25,5 +25,8 @@
     --color-textmedium:  #333333;
     --color-textdark: #000;
     --color-accent: #134D93;
+
+    --font-size-mobile-md: 16px;
+    --font-size-mobile-sm: 14px;
  
   }
