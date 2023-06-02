@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    min-height: 84.5vh;
 }
-
 
 /*Half-screen*/
 @media screen and (max-width: 550px) {
