@@ -142,7 +142,7 @@ const Navbar = () => {
       <div className={styles.navbar_menu}>
         {toggleMenu ? (
           <button
-            className="icon-button"
+            className={styles.icon_button} 
             onClick={handleToggleMenu}
             aria-label="Close Menu"
           >
@@ -150,7 +150,7 @@ const Navbar = () => {
           </button>
         ) : (
           <button
-            className="icon-button"
+            className={styles.icon_button} 
             onClick={handleToggleMenu}
             aria-label="Open Menu"
           >

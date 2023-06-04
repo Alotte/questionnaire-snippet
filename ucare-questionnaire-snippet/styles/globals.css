@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&family=Quicksand:wght@600&display=swap');
 
 :root {
 
     --font-family: 'Lato', sans-serif;
+    --font-family--header: 'Quicksand';
     /*
     Background
     */
@@ -26,6 +28,7 @@
     --color-textdark: #000;
     --color-accent: #134D93;
 
+    --font-size-mobile-lg: 18px;
     --font-size-mobile-md: 16px;
     --font-size-mobile-sm: 14px;
  

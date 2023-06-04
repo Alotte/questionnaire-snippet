@@ -70,6 +70,10 @@
         display: flex;
         align-items: center;
     }
+
+    .icon_button {
+        background: transparent;
+    }
     .navbar_menu__container {
         padding: 1rem 1rem;
         top:90px;

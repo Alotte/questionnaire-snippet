@@ -36,3 +36,16 @@ background: var(--gradient-bg);
             transform: scale(1);
     }
 }
+
+.showOnMobile {
+        display: none;
+} 
+
+@media screen and (max-width: 750px) {
+        .hideOnMobile {
+                display: none;
+        }
+        .showOnMobile {
+                display: block ;
+        } 
+}

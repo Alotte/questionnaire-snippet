@@ -33,9 +33,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       <div className={styles.searchBar_vline}></div>
       <div className={styles.searchBar_menu}>
         <a> All Questionnaires</a>
-        <button className={styles.button}>
-          
-        </button>
+
         <Image
               src= {ic_arrow_down}
               alt="Expand Researcher"

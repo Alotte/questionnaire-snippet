@@ -13,9 +13,21 @@
     display: flex;
 }
 .questionnairetb__buttons_btn {
-    padding-right: 2rem;
-    
+    width: 24px;
+    height:24px;
+    margin-right: 1rem;
+   
 }
+
+.questionnairetb__container_sorting{
+    display: flex;
+    flex-direction: row;
+}
+
+.questionnairetb__columnheading_icons__icon{
+    margin-right: 0.5rem;
+}
+
 .questionnairetb__head_row th{
     padding: 1rem 1rem;
 }
