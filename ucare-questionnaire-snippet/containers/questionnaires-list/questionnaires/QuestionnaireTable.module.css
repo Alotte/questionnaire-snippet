@@ -7,7 +7,7 @@
     overflow: hidden;
     margin: auto;
     margin-top: 50px;
-    
+
 }
 .questionnairetb__buttons {
     display: flex;
@@ -28,8 +28,10 @@
     margin-right: 0.5rem;
 }
 
+
 .questionnairetb__head_row th{
     padding: 1rem 1rem;
+    
 }
 
 .questionnairetb__head_row th {
@@ -39,11 +41,18 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    
 }
-
 .questionnairetb__body_row {
+    
     background: var(--color-content);
-}
+    border-bottom: 4px solid var(--color-bg-white); /* Add a border at the bottom of each row */
+   
+  }
+  
+  .questionnairetb__body_row:last-child {
+    border-bottom: none; /* Remove the border from the last row to avoid an extra line */
+  }
 
 .questionnairetb__body_title {
     color: var(--color-accent)!important;
@@ -51,10 +60,11 @@
 }
 
 .questionnairetb__body_row td{
+    overflow: hidden; /* Ensure that the rounded corners are visible */
     padding: 1rem 1rem;
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: var(--color-textlight)

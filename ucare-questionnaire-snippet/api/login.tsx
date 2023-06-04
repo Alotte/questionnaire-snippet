@@ -65,7 +65,7 @@ export async function fetchContents(accessToken: string): Promise<QuestionnaireL
       return {
         title: item.name,
         creationDate: date,
-        author: '', //Question: There is no author property on the API, which is confusing.
+        author: 'Unknown', //Question: There is no author property on the API, which is confusing.
         status: 'Active', //Question: There is no status property on the API.
       };
     });
