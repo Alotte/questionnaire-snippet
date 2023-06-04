@@ -13,7 +13,7 @@ type QuestionnaireTableProps = {
   questionnaires: QuestionnaireListing[];
 };
 
-
+//TODO: Configure typescript and add.
 const ColumnHeadings  = (heading)=> {
   return (
     <div className={styles.questionnairetb__columnheading}>

@@ -47,6 +47,7 @@
 
 .questionnairetb__body_title {
     color: var(--color-accent)!important;
+    text-transform: capitalize;
 }
 
 .questionnairetb__body_row td{
