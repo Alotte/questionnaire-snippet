@@ -13,11 +13,15 @@
     --color-bg-white: #FFFFFF;
     --color-content: #F3F4F5;
 
+    --color-inactive: #D2D0C9;
+
     /*
     CTA
     */
     --color-primary:#103567;
     --color-secondary: #D34C1A;
+    --color-secondary-light: #D24B18;
+    
     --color-tertiary: #F3F3F3;
 
     /*
