@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { login, fetchContents, LoginResponse } from "./login";
+import { login, fetchContents, LoginResponse } from "./api";
 import { QuestionnaireListing } from "../model/QuestionnaireListing";
 
 export const useFetchQuestionnaires = (): QuestionnaireListing[] => {
