@@ -58,7 +58,7 @@
 }
 
 /*Half-screen*/
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
     .navbar__links_container{
         display: none;
     }

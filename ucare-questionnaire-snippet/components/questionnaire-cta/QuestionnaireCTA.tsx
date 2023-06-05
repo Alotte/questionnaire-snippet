@@ -9,10 +9,16 @@ type QuestionnaireCTAProps = {
 
 const QuestionnaireCTA: React.FC<QuestionnaireCTAProps> = ({ onSaveDraft }) => {
   return (
-    <div>
+    <div className={styles.questionnaireCTA}>
+      <div className={styles.questionnaireCTA_btn}>
       <ButtonPrimary> Publish </ButtonPrimary>
+      </div>
+      <div className={styles.questionnaireCTA_btn}>
       <ButtonPrimary onClick={onSaveDraft}>Save as Draft</ButtonPrimary>
+      </div>
+      <div className={styles.questionnaireCTA_btn}>
       <ButtonSecondary>View as Participant</ButtonSecondary>
+      </div>
     </div>
   );
 };
