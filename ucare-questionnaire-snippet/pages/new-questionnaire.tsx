@@ -20,15 +20,6 @@ const NewQuestionnaire: React.FC = () => {
   const router = useRouter();
   const [questionnaireTitle, setQuestionnaireTitle] = useAtom(questionnaireTitleAtom);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Logic to save the new questionnaire data
-    // ...
-
-    // Navigate back to the questionnaire list page
-    router.push('/');
-  };
 
   return (
     <Layout home>
@@ -39,9 +30,8 @@ const NewQuestionnaire: React.FC = () => {
       <Breadcrumb/>
       <QuestionnaireNav />
       <Questionnaire />
-      <NewBlock />
       <QuestionnaireSettings />
-     /*Add buttons to save the form here*/
+      <QuestionnaireCTA />
     </div>
   </Layout>
    

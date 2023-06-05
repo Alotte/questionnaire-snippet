@@ -1,4 +1,5 @@
 import React from 'react'
+import NewBlock from '../../components/new-block/NewBlock'
 import { ButtonPrimary } from '../buttons'
 import styles from './Questionnaire.module.css'
 
@@ -6,7 +7,11 @@ type Props = {}
 
 const Questionnaire = (props: Props) => {
   return (
-    <div>Questionnaire</div>
+    <div>
+      Questionnaire
+      <NewBlock />
+    </div>
+    
   )
 }
 
