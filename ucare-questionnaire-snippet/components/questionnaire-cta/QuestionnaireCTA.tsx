@@ -11,14 +11,16 @@ const QuestionnaireCTA: React.FC<QuestionnaireCTAProps> = ({ onSaveDraft }) => {
   return (
     <div className={styles.questionnaireCTA}>
       <div className={styles.questionnaireCTA_btn}>
-      <ButtonPrimary> Publish </ButtonPrimary>
+      <ButtonPrimary onClick={onSaveDraft}>Save as Draft</ButtonPrimary>
       </div>
       <div className={styles.questionnaireCTA_btn}>
-      <ButtonPrimary onClick={onSaveDraft}>Save as Draft</ButtonPrimary>
+      <ButtonPrimary> Publish </ButtonPrimary>
       </div>
       <div className={styles.questionnaireCTA_btn}>
       <ButtonSecondary>View as Participant</ButtonSecondary>
       </div>
+
+      {/* TODO: Add a Delete button boilerplate */}
     </div>
   );
 };
