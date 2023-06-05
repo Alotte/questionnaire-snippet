@@ -96,7 +96,7 @@ Tablet & Half-screen
     margin-left: 1rem;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
 
     .header__links{
         width:0%;
