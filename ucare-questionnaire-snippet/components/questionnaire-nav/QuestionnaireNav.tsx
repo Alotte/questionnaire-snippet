@@ -29,7 +29,7 @@ const QuestionnaireNav = (props) => {
       <NavItem title="Questions" inFocus= {true} />
       <NavItem title="Results" inFocus= {false} />
       <NavItem title="Thank You Page" inFocus= {false} />
-      <div className={styles.questionnaireNav_horizontalLine__inactive}></div>
+      <div className={styles.questionnaireNav_horizontalLine}></div>
     </div>
   )
 }

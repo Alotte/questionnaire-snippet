@@ -21,7 +21,6 @@
 
 .questionnaireNav_item__active {
     color: var(--color-secondary-light);
-    margin-right: 1 rem;
     align-items: center;
     margin-bottom: 0.5rem;
     font-weight: 700;
@@ -48,4 +47,54 @@
 .questionnaireNav_horizontalLine__active {
     border-bottom: 1px solid var(--color-secondary-light);
     padding-right: 8rem;
+}
+
+.questionnaireNav_horizontalLine {
+    border-bottom: 1px solid var(--color-inactive);
+    width: 100%;
+}
+
+
+@media screen and (max-width: 770px) {
+  
+
+    .questionnaireNav_item__active {
+        font-size: var(--font-size-mobile-sm);
+        white-space: nowrap;
+    }
+    .questionnaireNav_item__inactive {
+        font-size: var(--font-size-mobile-sm);
+        white-space: nowrap;
+    
+    }
+
+    .questionnaireNav_horizontalLine__inactive {
+        padding-right: 7rem;
+    }
+    
+    .questionnaireNav_horizontalLine__active {
+        padding-right: 7rem;
+    }
+}
+ 
+@media screen and (max-width: 450px) {
+
+    .questionnaireNav_item__active {
+        font-size: 12px;
+        
+    }
+    .questionnaireNav_item__inactive {
+        font-size: 12px;
+    
+    }
+
+    .questionnaireNav_horizontalLine__inactive {
+        padding-right: 4rem;
+    }
+    
+    .questionnaireNav_horizontalLine__active {
+        padding-right: 4rem;
+    }
+
+ 
 }
