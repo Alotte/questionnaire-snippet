@@ -10,6 +10,7 @@
     */
     --gradient-bg: linear-gradient(98.78deg, #EDE8DF 39.67%, #D0DAEA 105.74%);
     --color-bg: #F3F2EF;
+    --color-input-field: #F4F4F4;
     --color-bg-white: #FFFFFF;
     --color-content: #F3F4F5;
 
@@ -18,6 +19,7 @@
     /*
     CTA
     */
+    --pure-material-onsurface-rgb: 19, 77, 147;
     --color-primary:#103567;
     --color-secondary: #D34C1A;
     --color-secondary-light: #D24B18;
@@ -31,6 +33,8 @@
     --color-textmedium:  #333333;
     --color-textdark: #000;
     --color-accent: #134D93;
+
+    --color-input: #49454F;
 
     --font-size-mobile-lg: 18px;
     --font-size-mobile-md: 16px;
