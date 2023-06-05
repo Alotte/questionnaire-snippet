@@ -1,14 +1,21 @@
 import React from 'react'
+import { ButtonPrimary, ButtonSecondary } from '../buttons';
 import styles from './QuestionnaireCTA.module.css'
 
-type Props = {}
 
-const QuestionnaireCTA = (props: Props) => {
-{// Add Buttons here to Save as draft (push the questionnaire to the server). Also include dumb button for Publish (ButtonPrimary), view as participant (ButtonSecondary).
-}
+type QuestionnaireCTAProps = {
+  onSaveDraft: () => void;
+};
+
+const QuestionnaireCTA: React.FC<QuestionnaireCTAProps> = ({ onSaveDraft }) => {
   return (
-    <div>QuestionnaireCTA</div>
-  )
-}
+    <div>
+      <ButtonPrimary> Publish </ButtonPrimary>
+      <ButtonPrimary onClick={onSaveDraft}>Save as Draft</ButtonPrimary>
+      <ButtonSecondary>View as Participant</ButtonSecondary>
+    </div>
+  );
+};
+
 
 export default QuestionnaireCTA

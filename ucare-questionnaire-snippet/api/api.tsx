@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import { QuestionnaireListing } from "../model/QuestionnaireListing";
+import { APIQuestionnaire } from "../model/APIQuestionnaire";
 
 export interface LoginResponse {
   accessToken: string;
@@ -17,11 +18,11 @@ export async function login(): Promise<LoginResponse | null> {
     );
 
     // Store the cookies for subsequent requests
+
     const access: string = response.data.data.access;
     const refresh: string = response.data.data.refresh;
-
-    console.log("Access Token:", access);
-    console.log("Refresh Token:", refresh);
+ 
+    
 
     return {
       accessToken: access,
@@ -34,6 +35,7 @@ export async function login(): Promise<LoginResponse | null> {
 }
 
 
+//Fetching Questionnaire data.
 export async function fetchContents(accessToken: string): Promise<QuestionnaireListing[]> {
   try {
     const response: AxiosResponse<any> = await axios.get(
@@ -74,5 +76,62 @@ export async function fetchContents(accessToken: string): Promise<QuestionnaireL
   } catch (error) {
     console.error('API request error:', error);
     return [];
+  }
+}
+
+
+// Format the QuestionnaireListing data to match the API structure
+function formatQuestionnaireData(title: string, id: number): APIQuestionnaire {
+
+  return {
+    children: [],
+    depth: 0,
+    id: id + 1,
+    is_deleted: false,
+    language: "SE", // Fill in the appropriate value
+    media: null,
+    name: title,
+    number_child: 0,
+    parent: null,
+    path: null,
+    placeholder: 0,
+    position: 8,
+    properties: {},
+    study: 3,
+    type: 20 // Assuming the type is always 20 for questionnaires
+  };
+}
+
+export async function saveQuestionnaire(accessToken: string, questionnaireTitle: string): Promise<any> {
+  try {
+    const response: AxiosResponse<any> = await axios.get(
+      "https://beta.u-careplatform.se/api/contents/",
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
+
+    const contents = response.data.results;
+    console.log("All contents: " + response.data.results);
+    const currentItemCount = Array.isArray(contents) ? contents.length : 0;
+    const formattedData = formatQuestionnaireData(questionnaireTitle, currentItemCount);
+
+    const saveResponse: AxiosResponse<any> = await axios.post(
+      "https://beta.u-careplatform.se/api/contents/",
+      formattedData,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
+    console.log("Save Response: " + JSON.stringify(saveResponse));
+
+    return saveResponse.data;
+  } catch (error) {
+    console.error("API request error:", error);
+    throw error;
   }
 }
