@@ -1,0 +1,17 @@
+.qSettings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    margin: 3rem 0;
+    color: var(--color-accent);
+    font-weight: 600;
+
+}
+
+.qSettings_icon {
+    min-width: 12px;
+    min-height: 8px;
+    margin-left: 1rem;
+}
