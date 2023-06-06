@@ -49,7 +49,7 @@ export async function getServerSideProps() {
       },
     };
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error logging in and fetching Questionnaires from U-CARE servers: ', error);
     
     return {
       props: {

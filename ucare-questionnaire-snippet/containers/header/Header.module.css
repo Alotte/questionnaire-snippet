@@ -83,10 +83,9 @@ Tablet & Half-screen
         padding: 0.5rem;
     }
     .header__links_logo {
-        width: 70px;
-        height: auto;
+        width: 95px;
+        height: 19px;
         margin-right: 1rem;
-
     }
 }
 
@@ -112,7 +111,7 @@ Tablet & Half-screen
 
     .header__links_logo {
         width: 0px;
-        height: auto;
+        height: 0px;
         margin: 0;
         padding: 0;
 
@@ -125,7 +124,7 @@ Tablet & Half-screen
 
     .header__links_logo {
         width: 70px;
-        height: auto;
+        height: 19px;
         margin: 0;
         padding: 0;
 

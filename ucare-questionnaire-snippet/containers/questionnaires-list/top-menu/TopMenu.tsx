@@ -15,7 +15,6 @@ const TopMenu = () => {
   };
 
   const handleSearch = (query: string) => {
-    console.log('Search query:', query);
     // Perform search logic here
   };
 

@@ -10,7 +10,7 @@ const QuestionnaireSettings = (props: Props) => {
     <div className={styles.qSettings}>
       <label content='text'>Questionnaire Settings</label>
       <div className={styles.qSettings_icon}>
-        <Image src={icArrowDownBlue} alt="accordion" />
+        <Image src={icArrowDownBlue} alt="accordion" width={12} height={8} />
       </div>
     </div>
   )

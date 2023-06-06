@@ -51,7 +51,6 @@ export async function fetchContents(accessToken: string): Promise<QuestionnaireL
     );
 
     const contents = response.data.results;
-    console.log('Contents:', contents);
 
     if (!Array.isArray(contents)) {
       throw new Error('Invalid response format: data is not an array');
@@ -113,7 +112,6 @@ export async function saveQuestionnaire(accessToken: string, questionnaireTitle:
     );
 
     const contents = response.data.results;
-    console.log("All contents: " + response.data.results);
     const currentItemCount = Array.isArray(contents) ? contents.length : 0;
     const formattedData = formatQuestionnaireData(questionnaireTitle, currentItemCount);
 
@@ -126,7 +124,6 @@ export async function saveQuestionnaire(accessToken: string, questionnaireTitle:
         },
       }
     );
-    console.log("Save Response: " + JSON.stringify(saveResponse));
 
     return saveResponse.data;
   } catch (error) {

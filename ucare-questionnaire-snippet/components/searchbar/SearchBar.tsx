@@ -37,6 +37,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         <Image
               src= {ic_arrow_down}
               alt="options"
+              width={12}
+              height ={12}
           />
       </div>
     </div>

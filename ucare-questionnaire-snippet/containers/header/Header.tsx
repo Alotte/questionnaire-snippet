@@ -50,6 +50,8 @@ const Header = () => {
         <div className= {styles.header__links_logo +" " + utils.scale_up_center}>
           <Image
             src= {logo}
+            width= {95}
+            height ={19}
             alt="U-CARE Logo"
           />
         </div>
