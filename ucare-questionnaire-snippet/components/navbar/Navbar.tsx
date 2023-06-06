@@ -5,6 +5,7 @@ import utils from '../../styles/utils.module.css'
 import Image from 'next/image';
 import {ic_copy, ic_calendar, ic_starred, ic_log, ic_participants,ic_bookmark, ic_expand, ic_import_contacts, ic_live_help, ic_mail,ic_s_large,ic_s_small,ic_s_small_grey,ic_settings, ic_questionnaires } from '../../public/assets/navbar/';
 import ic_dotted_line from '../../public/assets/ic-dotted-line.svg';
+import Link from 'next/link';
 
 interface MenuItemProps {
   icon: string;
@@ -15,14 +16,14 @@ const MenuItem: React.FC<MenuItemProps> = ({ icon, navName}) => {
   return (
     <>
     <div className= {styles.navbar__links_container__item}>
-      <a href={"#" + navName}>
+      <Link href={"/" + navName}>
           <Image
             src={icon}
             alt= {navName}
             width= {24}
             height= {24}
           />
-      </a>
+      </Link>
     </div>
       
     </>
@@ -33,27 +34,27 @@ const ProjectMenu = () => (
   <div className= {styles.navbar__links_container__submenu}>
     <MenuItem 
       icon= {ic_copy} 
-      navName ="project" 
+      navName ="" 
     />
 
   <MenuItem 
       icon= {ic_questionnaires} 
-      navName ="project" 
+      navName ="" 
     />
     
     <MenuItem 
       icon= {ic_calendar} 
-      navName ="calendar"
+      navName =""
     />
 
     <MenuItem 
       icon= {ic_starred} 
-      navName ="starred" 
+      navName ="" 
     />  
 
     <MenuItem 
       icon= {ic_log} 
-      navName ="log" 
+      navName ="" 
     />  
   </div>
 )
@@ -72,12 +73,12 @@ const Divider = () => (
 const Menu = () => ( 
   <>
     <div className= {styles.navbar__links_container__project}>
-      <a href={"#project-overview"}>
+      <Link href={"/"}>
           <Image
             src={ic_s_large}
             alt= {"project-overview"}
           />
-      </a>
+      </Link>
     </div>
     <ProjectMenu />
     <Divider/>

@@ -2,12 +2,12 @@ import axios, { AxiosResponse } from "axios";
 import { QuestionnaireListing } from "../model/QuestionnaireListing";
 import { APIQuestionnaire } from "../model/APIQuestionnaire";
 
-export interface LoginResponse {
+export interface Cookies {
   accessToken: string;
   refreshToken: string;
 }
 
-export async function login(): Promise<LoginResponse | null> {
+export async function login(): Promise<Cookies | null> {
   try {
     const response: AxiosResponse<any> = await axios.post(
       "https://beta.u-careplatform.se/api/accounts/login/",
@@ -78,7 +78,6 @@ export async function fetchContents(accessToken: string): Promise<QuestionnaireL
     return [];
   }
 }
-
 
 // Format the QuestionnaireListing data to match the API structure
 function formatQuestionnaireData(title: string, id: number): APIQuestionnaire {

@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { login, fetchContents, saveQuestionnaire,  LoginResponse } from "./api";
+import { login, fetchContents, saveQuestionnaire,  Cookies } from "./api";
 import { QuestionnaireListing } from "../model/QuestionnaireListing";
 
-
+//Not used anymore
 export const useFetchQuestionnaires = (): QuestionnaireListing[] => {
   const [questionnaires, setQuestionnaires] = useState<QuestionnaireListing[]>([]);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const response: LoginResponse | null = await login();
+        const response: Cookies | null = await login();
 
         if (response) {
           const accessToken = response.accessToken;
@@ -28,13 +28,11 @@ export const useFetchQuestionnaires = (): QuestionnaireListing[] => {
   return questionnaires;
 };
 
-
-
 export const useSaveQuestionnaire = () => {
   const saveQuestionnaireData = async (questionnaireTitle: string): Promise<void> => {
     console.log("Questionnaire title in useSaveQUestionnaire " + questionnaireTitle)
       try {
-        const response: LoginResponse | null = await login();
+        const response: Cookies | null = await login();
 
         if (response) {
           const accessToken = response.accessToken;
@@ -47,25 +45,4 @@ export const useSaveQuestionnaire = () => {
   };
 
   return saveQuestionnaireData;
-};
-
-export const useSaveQuestionnaire2 = (questionnaireTitle: string): void => {
-  useEffect(() => {
-    const saveData = async (): Promise<void> => {
-
-      try {
-        const response: LoginResponse | null = await login();
-
-        if (response) {
-          const accessToken = response.accessToken;
-        await saveQuestionnaire(accessToken, questionnaireTitle);
-        console.log("Questionnaire saved successfully.");
-        } 
-      } catch (error) {
-        console.error("Failed to save questionnaire:", error);
-      }
-    };
-
-    saveData();
-  }, [questionnaireTitle]);
 };

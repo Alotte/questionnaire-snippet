@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { useRouter } from 'next/router';
-import { useAtom } from 'jotai';
+import { atom, useAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
-import { ButtonPrimary } from '../components/buttons';
 import { Layout } from '../containers';
 import Head from 'next/head';
 import { Breadcrumb } from '../components';
@@ -14,33 +13,54 @@ import NewBlock from '../components/new-block/NewBlock';
 import QuestionnaireSettings from '../components/questionnaire-settings/QuestionnaireSettings';
 import QuestionnaireCTA from '../components/questionnaire-cta/QuestionnaireCTA';
 import { useSaveQuestionnaire } from "../api/effects";
-import { QuestionnaireListing } from '../model/QuestionnaireListing';
 
 const questionnaireTitleAtom = atomWithStorage('title', "");
+const isTitleValidAtom = atom(true);
 
 const NewQuestionnaire: React.FC = () => {
-  const router = useRouter();
   const [questionnaireTitle, setQuestionnaireTitle] = useAtom(questionnaireTitleAtom);
-  const handleSaveQuestionnaire = useSaveQuestionnaire();
+  const [isTitleValid, setIsTitleValid] = useAtom(isTitleValidAtom); // Flag to track title validity
+  const router = useRouter(); // Router instance
+  const handleSaveQuestionnaire = () => {
+    if (questionnaireTitle.trim() !== "") {
+      // Title is not empty, proceed with saving the questionnaire
+      useSaveQuestionnaire();
+      router.push('/'); // Route back to '/'
 
+    } else {
+      // Title is empty, set the flag to indicate invalid title
+      setIsTitleValid(false);
+    }
+  };
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuestionnaireTitle(e.target.value);   
+    const value = e.target.value;
+    setQuestionnaireTitle(value);   
+    
+    if (value.trim() !== "") {
+      // Title is not empty or is empty after trimming, proceed with saving the questionnaire
+      setIsTitleValid(true);
+    } else {
+      // Title is empty, set the flag to indicate invalid title
+      setIsTitleValid(false);
+    }
   };
 
   const handleSaveDraft = () => {
-    handleSaveQuestionnaire(questionnaireTitle);
+    handleSaveQuestionnaire();
   };
+
   return (
     <Layout home>
     <Head>
       <title>"U-CARE New Questionnaire"</title>
     </Head>
     <div className={styles.page}>
-      <Breadcrumb/>
+      <Breadcrumb titles={["New Questionnaire"]}/>
       <QuestionnaireNav />
       <Questionnaire
         title={questionnaireTitle}
         onTitleChange={handleTitleChange}
+        isTitleValid={isTitleValid} // Pass the validity flag to the Questionnaire component
       />
       <NewBlock />
       <QuestionnaireSettings />

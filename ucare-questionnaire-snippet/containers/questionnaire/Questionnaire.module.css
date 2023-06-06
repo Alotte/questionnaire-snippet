@@ -1,10 +1,16 @@
 .questionnaireTitle {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     font-family: 'Lato';
     margin-top: 2rem;
     width:100%;
+}
+.error  {
+    color: var(--color-danger);
+    font-size: 13px;
+    margin-top: 0.5rem;
 }
 
 
