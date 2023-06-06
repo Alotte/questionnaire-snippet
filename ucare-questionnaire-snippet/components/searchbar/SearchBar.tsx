@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 import styles from './SearchBar.module.css'
-import ic_download from '../../public/assets/ic-search-blue.svg';
+import ic_search from '../../public/assets/ic-search-blue.svg';
 import ic_arrow_down from '../../public/assets/ic-arrow-down-blue.svg';
 import verticalLine from '../../public/assets/ic-vertical-line.svg';
 
@@ -26,8 +26,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       />
       <button className={styles.button}>
       <Image
-            src= {ic_download}
-            alt="Expand Researcher"
+            src= {ic_search}
+            alt="search"
         />
       </button>
       <div className={styles.searchBar_vline}></div>
@@ -36,7 +36,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
         <Image
               src= {ic_arrow_down}
-              alt="Expand Researcher"
+              alt="options"
           />
       </div>
     </div>
