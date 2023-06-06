@@ -41,7 +41,7 @@ background: var(--gradient-bg);
         display: none;
 } 
 
-@media screen and (max-width: 770px ) {
+@media screen and (max-width: 780px ) {
         .hideOnMobile {
                 display: none;
         }

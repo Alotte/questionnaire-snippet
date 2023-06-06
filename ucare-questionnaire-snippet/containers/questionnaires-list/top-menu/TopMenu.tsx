@@ -28,7 +28,7 @@ const TopMenu = () => {
           <ButtonSecondary>
             <div className={styles.topmenu__btn}>
               <div className={styles.topmenu__btn_icon}>
-                <Image src={ic_download} alt="Expand Researcher" />
+                <Image src={ic_download} alt="Import" />
               </div>
               Import
             </div>

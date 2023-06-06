@@ -8,7 +8,34 @@
 .questionnaireCTA_btn {
     margin-right: 1rem;
 }
-@media screen and (max-width: 580px) {
+.questionnaireCTA_btn_icon {
+
+    min-width: 14px;
+    min-height: 18px;
+    margin-right: 0.5rem;
+}
+.questionnaireCTA_btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 185px;
+    min-height: 48px;
+}
+
+.questionnaireCTA_btn__danger {
+    margin-right: 1rem;
+} 
+
+.questionnaireCTA_btn__danger button {
+    margin-left: 0;
+    padding-left: 1rem;
+    min-width: 185px;
+    min-height: 48px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
     .questionnaireCTA {
         display: flex;
         flex-direction: column;
@@ -17,4 +44,6 @@
     .questionnaireCTA_btn {
         margin-bottom: 1rem;
     }
+
+
 }

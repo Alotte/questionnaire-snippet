@@ -28,6 +28,7 @@
     flex-direction: column;
     display: flex;
     align-items: center;   
+    min-width: 32px;
 
 }
 
@@ -58,7 +59,7 @@
 }
 
 /*Half-screen*/
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 780px) {
     .navbar__links_container{
         display: none;
     }
