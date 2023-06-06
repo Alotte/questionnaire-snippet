@@ -29,8 +29,6 @@ const QuestionnaireCTA: React.FC<QuestionnaireCTAProps> = ({ onSaveDraft }) => {
           </div>
           Delete Questionnaire</ButtonDanger>
       </div>
-
-      {/* TODO: Add a Delete button boilerplate */}
     </div>
   );
 };

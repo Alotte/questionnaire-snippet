@@ -13,27 +13,6 @@ type QuestionnaireTableProps = {
   questionnaires: QuestionnaireListing[];
 };
 
-//TODO: Configure typescript and add.
-const ColumnHeadings  = (heading)=> {
-  return (
-    <div className={styles.questionnairetb__columnheading}>
-      <div className={styles.questionnairetb__columnheading_icons}>
-        <div className= {styles.questionnairetb__columnheading_icons__icon}>
-          <Image
-            src= {ic_arrow_up}
-            alt="sort-first"
-          />
-        </div>
-        <div className= {styles.questionnairetb__columnheading_icons__icon}>
-          <Image
-            src= {ic_arrow_down}
-            alt="sort-last"
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
 
 const QuestionnaireTable: React.FC<QuestionnaireTableProps> = ({ questionnaires }) => {
   return (
