@@ -51,7 +51,7 @@ export async function fetchContents(accessToken: string): Promise<QuestionnaireL
     );
 
     const contents = response.data.results;
-
+    console.log("Questionnaire list contents:", contents);
     if (!Array.isArray(contents)) {
       throw new Error('Invalid response format: data is not an array');
     }
@@ -125,6 +125,8 @@ export async function saveQuestionnaire(accessToken: string, questionnaireTitle:
       }
     );
 
+    //Here we log the response so you can see in the terminal which response we get.
+    console.log("response:", saveResponse);
     return saveResponse.data;
   } catch (error) {
     console.error("API request error:", error);

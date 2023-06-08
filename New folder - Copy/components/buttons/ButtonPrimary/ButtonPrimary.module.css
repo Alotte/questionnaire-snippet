@@ -1,0 +1,20 @@
+.buttonPrimary {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.8rem;
+
+    background: var(--color-primary); 
+    color: #fff;
+
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    
+    border-style: none;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}

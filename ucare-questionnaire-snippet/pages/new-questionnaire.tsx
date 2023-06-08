@@ -21,10 +21,14 @@ const NewQuestionnaire: React.FC = () => {
   const [questionnaireTitle, setQuestionnaireTitle] = useAtom(questionnaireTitleAtom);
   const [isTitleValid, setIsTitleValid] = useAtom(isTitleValidAtom); // Flag to track title validity
   const router = useRouter(); // Router instance
+
+  //Save Draft is clicked
   const handleSaveQuestionnaire = () => {
+    const title: string= questionnaireTitle.trim();
+
     if (questionnaireTitle.trim() !== "") {
       // Title is not empty, proceed with saving the questionnaire
-      useSaveQuestionnaire();
+      useSaveQuestionnaire(title);
       router.push('/'); // Route back to '/'
 
     } else {
@@ -32,6 +36,8 @@ const NewQuestionnaire: React.FC = () => {
       setIsTitleValid(false);
     }
   };
+  
+  //User types in the title input bar
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuestionnaireTitle(value);   

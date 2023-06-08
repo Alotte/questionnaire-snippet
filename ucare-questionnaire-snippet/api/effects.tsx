@@ -28,19 +28,16 @@ export const useFetchQuestionnaires = (): QuestionnaireListing[] => {
   return questionnaires;
 };
 
-export const useSaveQuestionnaire = () => {
-  const saveQuestionnaireData = async (questionnaireTitle: string): Promise<void> => {
+export  const useSaveQuestionnaire = async (questionnaireTitle: string): Promise<void> => {
       try {
         const response: Cookies | null = await login();
-
+        
         if (response) {
           const accessToken = response.accessToken;
-        await saveQuestionnaire(accessToken, questionnaireTitle);
+        await saveQuestionnaire(accessToken, questionnaireTitle); 
         } 
       } catch (error) {
         console.error("Failed to save questionnaire:", error);
       }
   };
 
-  return saveQuestionnaireData;
-};

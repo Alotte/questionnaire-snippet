@@ -1,0 +1,20 @@
+.buttonSecondary {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.8rem;
+
+    background: var(--color-bg-white); 
+    color:var(--color-textlight);
+
+    font-family: 'Lato';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    
+    outline: solid;
+    outline-width: 1px;
+    border-radius: 5px;
+    border: 1px var(--color-textlight);
+    cursor: pointer;
+    white-space: nowrap;
+}

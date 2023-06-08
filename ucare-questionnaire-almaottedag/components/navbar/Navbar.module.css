@@ -1,0 +1,107 @@
+.navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.navbar_menu {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar button {
+    border: none;
+}
+.navbar__links {
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar__links_container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;   
+    min-width: 32px;
+
+}
+
+.navbar__links_container__item {
+    padding: 0.5rem 0rem;
+}
+
+.navbar__links_container__project {
+    padding: 1rem 0rem;
+}
+
+.navbar__links_container__divider {
+    padding: 1rem 0rem;
+}
+
+.navbar_menu__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color-bg-white);
+    padding: 2rem;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*Half-screen*/
+@media screen and (max-width: 780px) {
+    .navbar__links_container{
+        display: none;
+    }
+
+    .navbar__links {
+        display: none;
+    }
+    .navbar_menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon_button {
+        background: transparent;
+    }
+    .navbar_menu__container {
+        padding: 1rem 1rem;
+        top:90px;
+    }
+    .navbar_menu__container_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar__links_container__submenu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+        grid-gap: 10px; /* Gap between grid items */
+        align-items: center;
+        justify-content: center; /* Center items within the row */
+    }
+    .navbar__links_container__item {
+        padding: 1rem 1rem;
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .navbar_menu__container {
+        top: 140px;
+    }
+
+}
